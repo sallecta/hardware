@@ -41,7 +41,12 @@ svg
 <body onload="return calculate();">
 
 <h1>Quados antenna calculator</h1>
-<p>Based on <a href="https://3g-aerial.biz/onlajn-raschety/raschety-antenn/raschet-antenny-quados">Расчет антенны Quados </a></p>
+<p>Based on:
+	<ul>
+		<li> <a href="https://3g-aerial.biz/onlajn-raschety/raschety-antenn/raschet-antenny-quados">Расчет антенны Quados </a>
+		<li> <a href="https://www.qsl.net/yu1aw/ANT_VHF/quados.pdf">Quados Sector Antenna for 2.4 GHz WiFi. Dragoslav Dobričić, YU1AW </a>
+	</ul>
+</p>
 
 <form id="inputForm" onsubmit="return calculate();">
 	<label class="formbuilder-text-label">Frequency (MHz):
@@ -111,16 +116,16 @@ function _formatResult(argFreq, argFrames, argA, argB, argC, argD, argE, argWD, 
 	var l = 4 * (argA + argB + argD + (argFrames - 1) * argC);
 	result = "";
 	result = result + "QUADOS-" + argFrames + " " + argFreq + "MHz Antenna" + '\n';
-	result = result + "Wave length λ:  " + Math.round(WaveLen * 10) / 10 + "  mm" + '\n';
+	result = result + "λ (wave length) :  " + Math.round(WaveLen * 10) / 10 + "  mm" + '\n';
 	result = result + "-------------------------------------------------------------" + '\n';
-	result = result + "Distance A: " + Math.round(argA * 10) / 10 + " mm" + '\n';
-	result = result + "Distance B: " + Math.round(argB * 10) / 10 + "mm" + '\n';
-	result = result + "Frame side C: " + Math.round(argC * 10) / 10 + "mm" + '\n';
-	result = result + "Frame side D: " + Math.round(argD * 10) / 10 + "mm" + '\n';
-	result = result + "Line width E: " + Math.round(argE * 10) / 10 + "mm" + '\n';
-	result = result + "Distance to reflector H: " + Math.round(argH * 10) / 10 + "mm" + '\n';
+	result = result + "A (length): " + Math.round(argA * 10) / 10 + " mm" + '\n';
+	result = result + "B (length): " + Math.round(argB * 10) / 10 + "mm" + '\n';
+	result = result + "C (frame side): " + Math.round(argC * 10) / 10 + "mm" + '\n';
+	result = result + "D (frame side): " + Math.round(argD * 10) / 10 + "mm" + '\n';
+	result = result + "E (wire axis to axis): " + Math.round(argE * 10) / 10 + "mm" + '\n';
+	result = result + "H (distance to reflector): " + Math.round(argH * 10) / 10 + "mm" + '\n';
 	result = result + "-------------------------------------------------------------" + '\n';
-	result = result + "Wire full width: " + Math.round(l * 10) / 10 + "mm" + '\n';
+	result = result + "Wire full length: " + Math.round(l * 10) / 10 + "mm" + '\n';
 	result = result + "Approximated wire diameter: " + Math.round(argWD * 10) / 10 + "mm" + '\n';
 	result = result + "Reflector dimensions: " + Math.round(argI) + "x" + Math.round(argR) + "mm" + '\n';
 	return result;
