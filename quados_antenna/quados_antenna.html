@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Quados antenna calculator</title>
+
+<style id="compiled-css">
+body
+{
+	background-color: seashell;
+	font-family: sans-serif;
+}
+
+#inputForm
+{
+	padding: 20px;
+	font-size: 14px;
+}
+
+
+#inputForm textarea
+{
+	display:block;
+	width: 90%;
+	height: 250px;
+}
+
+label
+{
+	clear:both;display:block;
+}
+svg
+{
+	display: block;
+	position:relative;
+	margin-top: 40px;
+}
+</style>
+</head>
+
+<body onload="return calculate();">
+
+<h1>Quados antenna calculator</h1>
+<p>Based on <a href="https://3g-aerial.biz/onlajn-raschety/raschety-antenn/raschet-antenny-quados">Расчет антенны Quados </a></p>
+
+<form id="inputForm" onsubmit="return calculate();">
+	<label class="formbuilder-text-label">Frequency (MHz):
+		<input type="number" step="1" name="input_frequency" value="1800" required onchange="return calculate();">
+	</label>
+	<label for="input_frames">Frames quantity:
+		<select name="input_frames" id="input_frames" required onchange="return calculate();">
+			<option value="">choose frames quantity</option>
+			<option value="4" selected>4</option>
+			<option value="6">6</option>
+			<option value="8">8</option>
+		</select>
+	</label>
+	<input type="submit" value="Calculate">
+	<label class="clear">Result:
+		<textarea id="outputArea">No data</textarea>
+	</label>
+</form>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg8984" version="1.1" viewBox="0 0 125.42503 72.150451" height="72.150452mm" width="125.42503mm">
+	<defs id="defs8978">
+		<marker orient="auto" refY="0" refX="0" id="marker7162" style="overflow:visible">
+			<path id="path7160" d="M 0,0 5,-5 -12.5,0 5,5 Z" style="fill:#757575;fill-opacity:1;fill-rule:evenodd;stroke:#757575;stroke-width:1.00000003pt;stroke-opacity:1" transform="matrix(0.4,0,0,0.4,4,0)"></path>
+		</marker>
+		<marker orient="auto" refY="0" refX="0" id="marker7244" style="overflow:visible">
+			<path id="path7242" d="M 0,0 5,-5 -12.5,0 5,5 Z" style="fill:#757575;fill-opacity:1;fill-rule:evenodd;stroke:#757575;stroke-width:1.00000003pt;stroke-opacity:1" transform="matrix(-0.4,0,0,-0.4,-4,0)"></path>
+		</marker>
+		<marker style="overflow:visible" id="Arrow1Mstart" refX="0" refY="0" orient="auto">
+			<path transform="matrix(0.4,0,0,0.4,4,0)" style="fill:#787878;fill-opacity:1;fill-rule:evenodd;stroke:#787878;stroke-width:1.00000003pt;stroke-opacity:1" d="M 0,0 5,-5 -12.5,0 5,5 Z" id="path4636"></path>
+		</marker>
+		<marker style="overflow:visible" id="Arrow1Mend" refX="0" refY="0" orient="auto">
+			<path transform="matrix(-0.4,0,0,-0.4,-4,0)" style="fill:#787878;fill-opacity:1;fill-rule:evenodd;stroke:#787878;stroke-width:1.00000003pt;stroke-opacity:1" d="M 0,0 5,-5 -12.5,0 5,5 Z" id="path4639"></path>
+		</marker>
+		<marker orient="auto" refY="0" refX="0" id="marker7162-4" style="overflow:visible">
+			<path id="path7160-3" d="M 0,0 5,-5 -12.5,0 5,5 Z" style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1" transform="matrix(0.4,0,0,0.4,4,0)"></path>
+		</marker>
+		<marker orient="auto" refY="0" refX="0" id="marker7244-0" style="overflow:visible">
+			<path id="path7242-3" d="M 0,0 5,-5 -12.5,0 5,5 Z" style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1" transform="matrix(-0.4,0,0,-0.4,-4,0)"></path>
+		</marker>
+	</defs>
+	<g transform="translate(371.97667,-9.5407022)" id="layer1">
+		<path d="m -307.59237,24.441792 c 0,0.923295 -0.74848,1.671778 -1.67178,1.671778 -0.92329,0 -1.67177,-0.748483 -1.67177,-1.671778 0,-0.923295 0.74848,-1.671778 1.67177,-1.671778 0.9233,0 1.67178,0.748483 1.67178,1.671778 z m 0,-5.600342 c 0,0.923295 -0.74848,1.671778 -1.67178,1.671778 -0.92329,0 -1.67177,-0.748483 -1.67177,-1.671778 0,-0.923295 0.74848,-1.671778 1.67177,-1.671778 0.9233,0 1.67178,0.748483 1.67178,1.671778 z m -3.3013,-0.01048 h -6.8209 l -8.61345,-8.613531 -8.51608,8.516078 h -16.5368 l -8.67366,-8.516078 -11.45188,11.451877 11.45188,11.451879 8.71083,-8.710837 h 16.30488 l 8.71083,8.710837 8.61345,-8.613462 h 6.77287 m 3.28382,0 h 6.59002 l 8.66719,8.613476 8.61345,-8.61346 h 16.64629 l 8.6672,8.613477 11.45187,-11.451878 -11.45187,-11.451878 -8.6672,8.613477 h -16.64629 l -8.61345,-8.613454 -8.66719,8.613477 h -6.49394" style="fill:none;stroke:#1602dd;stroke-width:0.66500002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4625"></path>
+		<path id="path5490" d="m -304.92552,19.471174 0.0434,4.168413" style="fill:none;fill-opacity:1;stroke:#787878;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)"></path>
+		<path style="fill:none;fill-opacity:1;stroke:#757575;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker7162);marker-end:url(#marker7244)" d="m -301.8734,28.774243 -6.22287,0.04339" id="path7158"></path>
+		<path style="fill:none;fill-opacity:1;stroke:#787878;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m -309.3238,26.856901 0.0434,4.168412" id="path7606"></path>
+		<path id="path8252" d="m -301.19669,25.113714 0.0434,5.911599" style="fill:none;fill-opacity:1;stroke:#787878;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+		<text id="text8911" y="17.385414" x="-306.2861" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68368101px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" xml:space="preserve"><tspan style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68368101px;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke-width:0.26458332" y="17.385414" x="-306.2861" id="tspan8909">E</tspan></text>
+		<text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68357325px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" x="-306.72937" y="33.491844" id="text8915"><tspan id="tspan8917" x="-306.72937" y="33.491844" style="stroke-width:0.26458332">A</tspan></text>
+		<text id="text8921" y="13.100218" x="-299.93219" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68357325px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" xml:space="preserve"><tspan id="tspan8923" x="-299.93219" y="13.100218" style="stroke-width:0.26458332">C</tspan></text>
+		<text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68357325px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" x="-287.51987" y="13.100218" id="text8927"><tspan y="13.100218" x="-287.51987" id="tspan8925" style="stroke-width:0.26458332">C</tspan></text>
+		<text id="text8931" y="13.100218" x="-266.00552" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68357325px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" xml:space="preserve"><tspan id="tspan8929" x="-266.00552" y="13.100218" style="stroke-width:0.26458332">C</tspan></text>
+		<text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68357325px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" x="-253.80635" y="13.100218" id="text8935"><tspan y="13.100218" x="-253.80635" id="tspan8933" style="stroke-width:0.26458332">D</tspan></text>
+		<text id="text8939" y="30.388771" x="-277.89209" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68357325px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" xml:space="preserve"><tspan id="tspan8941" x="-277.89209" y="30.388771" style="stroke-width:0.26458332">B</tspan></text>
+		<rect transform="matrix(0.94309708,0.33251752,0,1,0,0)" y="148.63055" x="-331.46426" height="38.311916" width="14.935632" id="rect9166" style="fill:#898989;fill-opacity:1;stroke:none;stroke-width:0.16990486;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></rect>
+		<path id="path9750" style="fill:none;stroke:#787878;stroke-width:0.36500004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m -303.37065,62.361933 c 0.32877,0.120919 0.59482,0.41467 0.59482,0.656229 -3.6e-4,0.241438 -0.26739,0.339052 -0.59621,0.218091 -0.32874,-0.12092 -0.59483,-0.414637 -0.59483,-0.656233 3.7e-4,-0.241428 0.26738,-0.339056 0.59622,-0.218087 z m -1.9951,-0.733872 c 0.32875,0.120919 0.5948,0.41467 0.5948,0.656229 -3.3e-4,0.241438 -0.26738,0.33905 -0.5962,0.218091 -0.32875,-0.12092 -0.59482,-0.414636 -0.59482,-0.656233 3.6e-4,-0.241462 0.26738,-0.339057 0.59622,-0.218087 z m -0.004,0.862633 -0.004,1.783533 -3.07307,1.123204 3.02946,3.342659 -0.006,4.324528 -3.03834,1.151729 4.07376,4.494964 4.08568,-1.493358 -3.09869,-3.419079 0.006,-4.263849 3.10776,-1.135924 -3.06406,-3.380858 0.004,-1.770966 m 0.002,-0.858576 0.004,-1.723122 3.07307,-1.137264 -3.06409,-3.380874 0.006,-4.353175 3.07303,-1.13728 -4.07382,-4.494987 -4.08558,1.493394 3.06402,3.394914 -0.006,4.353179 -3.07298,1.123239 3.0641,3.394929 -0.004,1.697986"></path>
+		<path style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker7162-4);marker-end:url(#marker7244-0)" d="m -300.31658,59.654189 -6.1817,-2.112417" id="path7158-0"></path>
+		<text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.00738001px;line-height:1.25;font-family:'Noto Serif CJK JP';-inkscape-font-specification:'Noto Serif CJK JP, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0e0000;fill-opacity:1;stroke:none;stroke-width:0.26458332" x="-305.36621" y="56.903946" id="text8915-9"><tspan style="stroke-width:0.26458332" y="56.903946" x="-305.36621" id="tspan11213">H</tspan></text>
+		<path d="m -309.60072,60.37539 c 0.32874,0.120919 0.59479,0.41467 0.59479,0.656229 -3.3e-4,0.241437 -0.26738,0.339051 -0.5962,0.218091 -0.32875,-0.12092 -0.59482,-0.414637 -0.59482,-0.656234 3.6e-4,-0.241428 0.26738,-0.339055 0.59623,-0.218086 z m -1.99512,-0.733872 c 0.32875,0.120919 0.5948,0.41467 0.5948,0.656229 -3.4e-4,0.241438 -0.26739,0.33905 -0.59619,0.218091 -0.32876,-0.12092 -0.59484,-0.414637 -0.59484,-0.656233 3.8e-4,-0.241462 0.26739,-0.339057 0.59623,-0.218087 z m -0.004,0.862633 -0.004,1.783533 -3.07307,1.123204 3.02947,3.342658 -0.006,4.324528 -3.03835,1.15173 4.07376,4.494964 4.08568,-1.493358 -3.09869,-3.419079 0.006,-4.263849 3.10775,-1.135924 -3.06406,-3.380859 0.004,-1.770965 m 0.002,-0.858576 0.004,-1.723122 3.07307,-1.137264 -3.0641,-3.380874 0.006,-4.353175 3.07303,-1.13728 -4.07381,-4.494987 -4.08559,1.493394 3.06402,3.394914 -0.006,4.353179 -3.07297,1.123239 3.06409,3.394929 -0.004,1.697986" style="fill:none;stroke:#1602dd;stroke-width:0.36500004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4625-6"></path>
+	</g>
+</svg>
+
+<script>
+
+function _formatResult(argFreq, argFrames, argA, argB, argC, argD, argE, argWD, argH, argI, argR)
+{
+	var WaveLen = 299792 / argFreq;
+	var l = 4 * (argA + argB + argD + (argFrames - 1) * argC);
+	result = "";
+	result = result + "QUADOS-" + argFrames + " " + argFreq + "MHz Antenna" + '\n';
+	result = result + "Wave length λ:  " + Math.round(WaveLen * 10) / 10 + "  mm" + '\n';
+	result = result + "-------------------------------------------------------------" + '\n';
+	result = result + "Distance A: " + Math.round(argA * 10) / 10 + " mm" + '\n';
+	result = result + "Distance B: " + Math.round(argB * 10) / 10 + "mm" + '\n';
+	result = result + "Frame side C: " + Math.round(argC * 10) / 10 + "mm" + '\n';
+	result = result + "Frame side D: " + Math.round(argD * 10) / 10 + "mm" + '\n';
+	result = result + "Line width E: " + Math.round(argE * 10) / 10 + "mm" + '\n';
+	result = result + "Distance to reflector H: " + Math.round(argH * 10) / 10 + "mm" + '\n';
+	result = result + "-------------------------------------------------------------" + '\n';
+	result = result + "Wire full width: " + Math.round(l * 10) / 10 + "mm" + '\n';
+	result = result + "Approximated wire diameter: " + Math.round(argWD * 10) / 10 + "mm" + '\n';
+	result = result + "Reflector dimensions: " + Math.round(argI) + "x" + Math.round(argR) + "mm" + '\n';
+	return result;
+}
+
+function calculate()
+{
+	form = document.getElementById('inputForm');
+	outputArea = document.getElementById('outputArea');
+	Freq = form.elements['input_frequency'].value * 1;
+	var WaveLen = 299792 / Freq;
+	var Frames = form.elements['input_frames'].value * 1;
+	if (Frames == 4)
+	{
+		var A = 0.1814257885467257 * WaveLen;
+		var B = 0.3219899130063511 * WaveLen;
+		var C = 0.2942039814271228 * WaveLen;
+		var D = 0.3228071462880931 * WaveLen;
+		var E = 0.0776371617654907 * WaveLen;
+		var WD = 0.0163446656348402 * WaveLen;
+		var H = 0.1421985910231094 * WaveLen;
+		var I = 2.942039814271228 * WaveLen;
+		var R = 0.5965802956716657 * WaveLen;
+		result = _formatResult(Freq, Frames, A, B, C, D, E, WD, H, I, R)
+	}
+	if (Frames == 6)
+	{
+		var A = 0.1740706890110477 * WaveLen;
+		var B = 0.3505930778673213 * WaveLen;
+		var C = 0.3383345786411912 * WaveLen;
+		var D = 0.2974729145540908 * WaveLen;
+		var E = 0.3277105459785451 * WaveLen;
+		var F = 0.0817233281742008 * WaveLen;
+		var WD = 0.0163446656348402 * WaveLen;
+		var H = 0.1184988258525911 * WaveLen;
+		var I = 4.413059721406842 * WaveLen;
+		var R = 0.5965802956716657 * WaveLen;
+		result = _formatResult(Freq, Frames, A, B, C, D, E, WD, H, I, R)
+	}
+	if (Frames == 8)
+	{
+		var A = 0.1609949565031755 * WaveLen;
+		var B = 0.3285277792602871 * WaveLen;
+		var C = 0.3375173453594492 * WaveLen;
+		var D = 0.3620343438117095 * WaveLen;
+		var E = 0.3064624806532529 * WaveLen;
+		var F = 0.3399690452046752 * WaveLen;
+		var G = 0.0931645941185889 * WaveLen;
+		var WD = 0.0163446656348402 * WaveLen;
+		var H = 0.1119609595986551 * WaveLen;
+		var I = 5.884079628542456 * WaveLen;
+		var R = 0.5965802956716657 * WaveLen;
+		result = _formatResult(Freq, Frames, A, B, C, D, E, WD, H, I, R)
+	}
+	outputArea.innerHTML = result;
+	return false;
+}
+
+</script>
+
+</body>
+
+</html>
